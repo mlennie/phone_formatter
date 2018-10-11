@@ -1,5 +1,5 @@
 def format_number(s)
-  s.gsub!(/[^0-9]*/, '').unpack(('A3' * ((s.length - 2) / 3)) + (s.length % 3 === 0 ? "" : (s.length - 2) % 3 != 0 ? 'A2A2' : 'A2')).join('-')
+  s.gsub!(/[^0-9]*/, '').unpack(('A3' * ((s.length - 2) / 3)) + (s.length % 3 === 0 ? 'A3' : (s.length - 2) % 3 != 0 ? 'A2A2' : 'A2')).join('-')
 end
 
 # The following are parsed correctly
